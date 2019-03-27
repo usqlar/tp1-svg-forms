@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Paths</title>
+    </head>
+    <body>
+
+		<svg width="400" height="300">
+
+			<pattern id="pattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"> 
+			<circle cx="5" cy="5" r="5" fill="#999" /> 
+			</pattern>
+			<mask id="pattern-mask" x="0" y="0" width="1" height="1" > 
+			<rect x="0" y="0" width="400" height="300" fill="url(#pattern)"/> 
+			</mask>
+
+			<image xlink:href="mona.jpg"
+			x="0" y="0" width="400" height="300" mask="url(#pattern-mask)"/>
+			
+		</svg>
+
+    </body>
+</html>
